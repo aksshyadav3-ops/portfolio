@@ -1,0 +1,262 @@
+:root {
+  --primary-color: #ff003c;         
+  --secondary-color: #2ec7ff;        
+  --accent-color: #00eaff;          
+  --accent-color-hover: #00bcd4;
+  --light-color: #ffffff;
+  --text-color: #222;
+  --bg-light-gray: #fef3ff;          
+  --nav-height: 70px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  color: var(--text-color);
+  background: var(--light-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+section:nth-child(even) {
+  background-color: var(--bg-light-gray);
+}
+
+h1, h2, h3, h4 {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+#gc1 {
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #ff0066, #ff8a00);
+  color: var(--light-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--nav-height);
+  padding: 0 2rem;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+nav .logo a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--light-color);
+  text-decoration: none;
+}
+
+nav .nav-links {
+  display: flex;
+  list-style: none;
+}
+
+nav .nav-links li {
+  margin-left: 1.5rem;
+}
+
+nav .nav-links a {
+  color: var(--light-color);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+nav .nav-links a:hover {
+  color: var(--accent-color);
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #00ffe5, #e100ff);
+  color: var(--light-color);
+  padding-top: var(--nav-height);
+}
+
+#home h1 {
+  font-size: 3.8rem;
+  margin-bottom: 0.5rem;
+}
+
+#home .tagline {
+  font-size: 1.6rem;
+  opacity: 0.95;
+}
+
+#home .profile-pic {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 6px solid var(--accent-color);
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+#about .container {
+  max-width: 800px;
+  text-align: center;
+}
+
+.education-skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.education-column, .skills-column {
+  flex: 1 1 45%;
+}
+
+.education-column h3, .skills-column h3 {
+  border-bottom: 3px solid var(--accent-color);
+  padding-bottom: 10px;
+}
+
+.skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-item {
+  background: linear-gradient(45deg, #ff8a00, #e52e71);
+  color: var(--light-color);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--light-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.project-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1.6rem;
+}
+
+.socialmedia-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.socialmedia {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+socialmedia img {
+  width: 45px;
+  height: 45px;
+}
+
+.socialmedia a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.socialmedia a:hover {
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+footer {
+  background: linear-gradient(90deg, #ff0066, #0011ff);
+  color: var(--light-color);
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    position: static;
+  }
+
+  nav .nav-links {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  #home h1 {
+    font-size: 3rem;
+  }
+
+  #home .tagline {
+    font-size: 1.3rem;
+  }
+}
